@@ -7,7 +7,7 @@ function moveToBook() {
 
 const allSeats = document.getElementsByClassName("seat-btn");
 let count = 0;
-const cls = "Economny";
+const cls = "Economy";
 const price = 550;
 
 for (const seat of allSeats) {
@@ -20,6 +20,17 @@ for (const seat of allSeats) {
       const seatArea = document.getElementById("seat-area");
       seatArea.classList.add("pointer-events-none");
     }
+
+    const phoneValue = document.getElementById("phone-field");
+    const nextBtn = document.getElementById("next-btn");
+
+    phoneValue.addEventListener("input", function () {
+      if (count >= 1 && phoneValue.value.length >= 1) {
+        nextBtn.disabled = false;
+      } else {
+        nextBtn.disabled = true;
+      }
+    });
 
     const seatName = e.target.innerText;
     const seatSelected = e.target.classList.add("bg-[#1DD100]", "text-white");
@@ -84,6 +95,10 @@ function couponTotal() {
     } else if (couponCode === "COUPLE20") {
       const discountedPrice = grandTotalCost * 0.2;
       setInnerText("grand-total", grandTotalCost - discountedPrice);
+      const couponCon = document.getElementById("coupon-container");
+      couponCon.classList.add("hidden");
+      const line = document.getElementById("line");
+      line.classList.remove("hidden");
     } else {
       alert("Invalid Coupon");
     }

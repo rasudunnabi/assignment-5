@@ -82,13 +82,14 @@
                 <span class="text-[#1DD100]">P Paribahan</span>
               </h1>
               <p class="mb-5">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
+                Hop onboard effortlessly with our online bus booking service!
+                Say farewell to queues and phone calls-reserve your seat in a
+                snap. Browse routes, compare prices, and book your journey
+                hassle-free. Enjoy the freedom to travel anytime, anywhere.
               </p>
               <button
                 onclick="moveToBook ()"
-                class="btn bg-[#1DD100] border-none font-bold"
+                class="btn bg-[#1DD100] border-none font-bold text-white"
               >
                 Buy Ticket
               </button>
@@ -106,8 +107,10 @@
             <div
               class="flex flex-col justify-center text-start items-center w-[60%]"
             >
-              <div class="flex flex-col gap-2">
-                <h3 class="text-5xl font-extrabold text-black">15% OFF</h3>
+              <div class="flex flex-col gap-2 items-center justify-center">
+                <h3 class="text-3xl lg:text-5xl font-extrabold text-black">
+                  15% OFF
+                </h3>
                 <h5 class="text-xl font-semibold text-black">
                   on your next purchase
                 </h5>
@@ -118,7 +121,9 @@
             <div
               class="flex flex-col gap-2 justify-center items-center w-[40%]"
             >
-              <h3 class="text-5xl font-extrabold text-black">NEW15</h3>
+              <h3 class="text-3xl lg:text-5xl font-extrabold text-black">
+                NEW15
+              </h3>
               <p class="text-black">Coupon Code</p>
             </div>
           </div>
@@ -126,8 +131,10 @@
             <div
               class="flex flex-col justify-center text-start items-center w-[60%]"
             >
-              <div class="flex flex-col gap-2">
-                <h3 class="text-5xl font-extrabold text-black">20% OFF</h3>
+              <div class="flex flex-col gap-2 items-center justify-center">
+                <h3 class="text-3xl lg:text-5xl font-extrabold text-black">
+                  20% OFF
+                </h3>
                 <h5 class="text-xl font-semibold text-black">
                   on your next purchase
                 </h5>
@@ -138,7 +145,9 @@
             <div
               class="flex gap-2 flex-col justify-center items-center w-[40%]"
             >
-              <h3 class="text-5xl font-extrabold text-black">Couple20</h3>
+              <h3 class="text-3xl lg:text-5xl font-extrabold text-black">
+                Couple20
+              </h3>
               <p class="text-black">Coupon Code</p>
             </div>
           </div>
@@ -154,10 +163,11 @@
         id="book-ticket"
         class="mt-6 lg:mt-24 p-2 lg:p-12 text-center space-y-8 bg-[#F7F8F8] rounded-[50px] border-t-2 border-[#1DD100]"
       >
-        <h3 class="text-4xl font-extrabold mt-8">P.H Paribahan</h3>
+        <h3 class="text-4xl font-extrabold mt-8">P Paribahan</h3>
         <p class="text-black">
-          Yes, you can run unit tests and view the results directly within the
-          app. The integrated testing features allow for a streamlined .
+          Experience the ease of securing your seat with our user-friendly
+          online ticket booking platform, designed for convenience and
+          efficiency.
         </p>
         <div class="flex flex-col lg:flex-row bg-white rounded-3xl">
           <div
@@ -173,7 +183,7 @@
               </div>
               <div>
                 <button
-                  class="btn bg-[#1DD10026] text-[#1cd100] w-full lg:w-auto"
+                  class="btn bg-[#1DD10026] text-[#1cd100] w-full lg:w-auto pointer-events-none"
                 >
                   <img src="images/seat-green.png" alt="" /><span
                     id="current-seats"
@@ -185,22 +195,22 @@
             <div class="bg-[#F7F8F8] p-6 rounded-xl">
               <div class="flex justify-between mb-4">
                 <h3>Route</h3>
-                <h3>Dhaka - Sylhet</h3>
+                <h3 class="text-black font-semibold">Dhaka - Sylhet</h3>
               </div>
               <hr class="border-dashed" />
               <div class="flex justify-between my-4">
                 <h3>Departure Time</h3>
-                <h3>9:00 PM</h3>
+                <h3 class="text-black font-semibold">9:00 PM</h3>
               </div>
               <hr class="border-dashed" />
               <div class="flex flex-col lg:flex-row gap-6 mt-4">
-                <button class="btn flex-1 bg-[#0307120D]">
+                <button class="btn flex-1 bg-[#0307120D] pointer-events-none">
                   Boarding Point - Laxmipur
                 </button>
-                <button class="btn flex-1 bg-[#0307120D]">
+                <button class="btn flex-1 bg-[#0307120D] pointer-events-none">
                   Dropping Point - Bogura
                 </button>
-                <button class="btn flex-1 bg-[#0307120D]">
+                <button class="btn flex-1 bg-[#0307120D] pointer-events-none">
                   Est. Time - 11 Hour
                 </button>
               </div>
@@ -367,19 +377,22 @@
                 <h1>Total Price</h1>
                 <h1>BDT <span id="total-price">0</span></h1>
               </div>
-              <div id="coupon-container" class="bg-[#F7F8F8] px-6 pb-6 flex justify-between">
+              <div
+                id="coupon-container"
+                class="bg-[#F7F8F8] px-6 pb-6 flex justify-between"
+              >
                 <div class="w-full flex">
                   <input
                     id="coupon-field"
                     type="text"
-                    class="w-full px-4 py-2 border rounded-l-lg focus:outline-none"
+                    class="w-full px-4 py-2 border rounded-l-lg focus:outline-none border-none"
                     placeholder="Have any coupon?"
                   />
                   <button
                     onclick="couponTotal()"
                     disabled
                     id="coupon-btn"
-                    class="btn bg-[#1DD100] rounded-l-none"
+                    class="btn bg-[#1DD100] rounded-l-none text-white"
                     disabled
                   >
                     Apply
@@ -402,12 +415,42 @@
               <h1 class="font-semibold text-left text-lg mt-4">
                 Phone Number*
               </h1>
-              <input class="input input-bordered w-full" type="text" />
+              <input
+                id="phone-field"
+                class="input input-bordered w-full"
+                type="text"
+              />
               <h1 class="font-semibold text-left text-lg mt-4">Email ID*</h1>
               <input class="input input-bordered w-full" type="text" />
-              <button class="btn w-full mt-4 bg-[#1DD100] text-white" disabled>
+              <button
+                onclick="my_modal_2.showModal()"
+                id="next-btn"
+                class="btn w-full mt-4 bg-[#1DD100] text-white"
+                disabled
+              >
                 Next
               </button>
+              <dialog id="my_modal_2" class="modal">
+                <div class="modal-box">
+                  <div class="flex flex-col items-center gap-4 m-4">
+                    <img src="images/success.png" alt="" />
+                    <h3 class="text-[#27AE60] font-bold">SUCCESS</h3>
+                    <h5 class="font-bold">
+                      Thank you for booking out seats. We are working hard to
+                      find best service and deals for you
+                    </h5>
+                    <p>Shortly you will find a confirmation in your email.</p>
+                    <button
+                      class="btn bg-[#27AE60] rounded-3xl text-white px-9"
+                    >
+                      <a href="/">Continue</a>
+                    </button>
+                  </div>
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                  <button>close</button>
+                </form>
+              </dialog>
               <div class="mt-4 flex justify-between underline">
                 <h6>Terms and Conditions</h6>
                 <h6>Cancellation Policy</h6>
@@ -417,6 +460,20 @@
         </div>
       </section>
     </main>
+    <footer class="container mx-auto px-2 my-4">
+      <div class="footer p-10 bg-neutral text-neutral-content rounded-3xl bg-[#030712]">
+        <aside>
+          <img src="images/bus-icon.png" alt="">
+          <p>P Paribahan Ltd.<br>Providing reliable travel since 1992</p>
+        </aside> 
+        <nav>
+          <h6 class="footer-title">Download our app</h6> 
+          <div class="grid grid-flow-col gap-4">
+            <img class="w-32" src="images/play-store-logo-33874.png" alt="">
+          </div>
+        </nav>
+      </div>
+    </footer>
     <script src="scripts/utility.js"></script>
     <script src="scripts/script.js"></script>
   </body>
